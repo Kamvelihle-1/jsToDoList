@@ -36,6 +36,16 @@
 .heading{
     background-color: azure;
     padding: 2rem;
+    width: fit-content;
+}
+.display{
+    background-color: aliceblue;
+    padding: 2rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+#toDoList-item{
+    display: inline;
 }
 #toDo-input{
     width: 70%;
@@ -46,13 +56,13 @@
    
 }
 #item-sort,#add-item{
-    padding: 0 5px 0;
-    width: 10%;
+ 
+    width: fit-content;
 }
 span{
     font-size: large;
     font-weight: bold;
-    margin: 5rem;
+    margin: 1rem;
 }
 
 #remove-item{
