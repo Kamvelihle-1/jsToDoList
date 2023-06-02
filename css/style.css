@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    
+}
+.container{
+    width: inherit;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30%;
+    padding-top: 15%;
+}
+.tdList{
+    width: 50%;
+    align-items: center;
+    padding:3rem 2rem 3rem;
+    margin: 2rem;
+    justify-self: center;
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 1.5rem;
+    box-shadow:3px 3px 5px rgb(233, 190, 134);
+}
+.heading,.operation,.display{
+    width: 100%;
+    text-align: center;
+}
+.heading{
+    background-color: azure;
+    padding: 2rem;
+}
+#toDo-input{
+    width: 70%;
+}
+
+#toDo-input,#item-sort,#add-item{
+   height: 2.5rem;
+   
+}
+#item-sort,#add-item{
+    padding: 0 5px 0;
+    width: 10%;
+}
+span{
+    font-size: large;
+    font-weight: bold;
+    margin: 5rem;
+}
+
+#remove-item{
+    color: red;
+    box-shadow: 3px 3px 5px rgb(79, 76, 76);
+    width: 10%;
+    padding: 2px 0 2px;
+
+}
+
+@media screen and (width<900px){
+    .container{
+        padding-left: 25%;
+    }
+    
+}
+@media screen and (width<600px){
+    .container{
+        padding-left: 15%;
+    }
+    
+}
+@media screen and (width<460px){
+   #item-sort,#add-item{
+    width: 100%;
+   }
+   #toDo-input{
+    width: 100%;
+   }
+    
+}
+
