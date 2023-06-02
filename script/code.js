@@ -3,6 +3,8 @@ let order=document.querySelector('#item-sort')
 let add=document.querySelector('#add-item')
 let display=document.querySelector('.display')
 let rm=document.querySelector('#remove-item')
+let ck=document.querySelector('#toDoList-item')
+let sn=document.querySelector('#info')
 
 
 let arrData=[]
@@ -23,10 +25,9 @@ add.addEventListener('click',()=>{
             
             default:
                 arrData.push(input.value)
-                console.log(arrData);
                 clear()
-                output(arrData)
                 localStorage.setItem("to-Do",JSON.stringify(arrData))
+                output(arrData)
                 input.value=""
                 break;
 
@@ -42,17 +43,26 @@ add.addEventListener('click',()=>{
 })
 order.addEventListener('click',()=>{
    clear()
-   arrData.sort((x,y)=>{x-y})
+   arrData.sort()
    localStorage.setItem("to-Do",JSON.stringify(arrData))
    output(arrData)
 })
 
+ck.addEventListener('change',()=>{
+    if (ck.checked) {
+        sn.style="text-decoration: line-through"
+    }
+   
+})
+    
+
+    
+
+
 rm.addEventListener('click',()=>{
 
-   arrData.forEach(i =>{
 
-   })
-   .splice(indexOf(val)-1,1)
+   
 })
 function clear() {
     input.value=" "
@@ -63,8 +73,8 @@ function output(y) {
     y.forEach(data => {
         display.innerHTML+=
         `
-        <input type="checkbox" name="toDoList-item" id="toDoList-item">
-            <span >   ${data}  </span>
+        <input type="checkbox"  name="toDoList-item" id="toDoList-item">
+            <span id="info">   ${data}  </span>
             <button id="remove-item">X</button>
         </input> 
         `
